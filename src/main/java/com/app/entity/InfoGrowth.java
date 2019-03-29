@@ -7,8 +7,8 @@ import java.util.Date;
 public class InfoGrowth {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int infoGrowthId;
 
     private Date date;
 

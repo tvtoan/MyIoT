@@ -6,8 +6,8 @@ import javax.persistence.*;
 public class Fertilizer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int fertilizerId;
 
     private String description;
 

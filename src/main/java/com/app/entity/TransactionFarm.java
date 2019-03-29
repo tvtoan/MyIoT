@@ -8,8 +8,8 @@ import java.util.List;
 public class TransactionFarm {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int transactionFarmId;
 
     private Date startDate;
 

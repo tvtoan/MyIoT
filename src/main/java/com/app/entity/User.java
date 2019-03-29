@@ -7,10 +7,10 @@ import java.util.List;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int userId;
 
-    private String userName;
+    private String username;
 
     private String password;
 

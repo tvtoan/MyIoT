@@ -7,8 +7,8 @@ import java.util.List;
 public class SubFarm {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int subFarmId;
 
     private String description;
 
