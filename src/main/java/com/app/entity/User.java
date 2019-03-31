@@ -1,20 +1,36 @@
 package com.app.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int userId;
+    private Long userId;
 
     private String username;
 
     private String password;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Farm> farms;
-}
+	public User(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
 
+	public User() {
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+}

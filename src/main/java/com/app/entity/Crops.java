@@ -1,14 +1,13 @@
 package com.app.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Crops {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int cropsId;
+    private Long cropsId;
 
     private String name;
 
@@ -17,6 +16,37 @@ public class Crops {
     @OneToOne(mappedBy = "cropsTransaction")
     private TransactionFarm transactionFarm;
 
-    @OneToMany(mappedBy = "crops", cascade = CascadeType.ALL)
-    private List<NutritionCrops> nutritionCrops;
+
+    public Crops(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public Long getCropsId() {
+        return cropsId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public TransactionFarm getTransactionFarm() {
+        return transactionFarm;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setTransactionFarm(TransactionFarm transactionFarm) {
+        this.transactionFarm = transactionFarm;
+    }
 }

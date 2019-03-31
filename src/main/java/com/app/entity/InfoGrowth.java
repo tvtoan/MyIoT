@@ -8,7 +8,7 @@ public class InfoGrowth {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int infoGrowthId;
+    private Long infoGrowthId;
 
     private Date date;
 
@@ -17,7 +17,7 @@ public class InfoGrowth {
     private String description;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "transactionFarmId")
     private TransactionFarm transactionFarm;
 
 }

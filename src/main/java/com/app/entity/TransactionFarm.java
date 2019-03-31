@@ -2,14 +2,13 @@ package com.app.entity;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class TransactionFarm {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int transactionFarmId;
+    private Long transactionFarmId;
 
     private Date startDate;
 
@@ -20,13 +19,10 @@ public class TransactionFarm {
     private double sales;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "subFarmId")
     private SubFarm subFarm;
 
-    @OneToMany(mappedBy = "transactionFarm", cascade = CascadeType.ALL)
-    private List<InfoGrowth> infoGrowths;
-
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(unique = true)
+    @JoinColumn(name = "cropsId", unique = true)
     private Crops cropsTransaction;
 }
