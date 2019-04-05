@@ -16,7 +16,8 @@ public class FarmController {
 
     @GetMapping("/{userId}/add-farm")
     public Farm addFarm(@PathVariable Long userId) {
-        return farmService.addFarmToUser(userId, new Farm("Farm 1", new Address()));
+//        return farmService.addFarmToUser(userId, new Farm("Farm 1", new Address()));
+    	return null;
     }
 
     @GetMapping("/{userId}/get-farm/{farmId}")
@@ -26,7 +27,8 @@ public class FarmController {
 
     @GetMapping("/{userId}/all-farms")
     public Iterable<Farm> getFarmOfUser(@PathVariable Long userId) {
-        return farmService.getFarmOfUser(userId);
+//        return farmService.getFarmOfUser(userId);
+    	return null;
     }
 
     @GetMapping("/{userId}/delete-farm/{farmId}")
@@ -41,7 +43,8 @@ public class FarmController {
 
     @GetMapping("/{userId}/update-farm/{farmId}")
     public Farm updateFarm(@PathVariable Long userId, @PathVariable Long farmId) {
-        return farmService.updateFarm(userId, farmId, new Farm("Farm abc", new Address()));
+//        return farmService.updateFarm(userId, farmId, new Farm("Farm abc", new Address()));
+    	return null;
     }
 
 //    @GetMapping("/{userId}/add-address-farm/{farmId}")

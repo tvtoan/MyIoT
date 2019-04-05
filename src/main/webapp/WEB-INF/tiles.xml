@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition" template="/WEB-INF/layouts/classic.jsp">
+        <!--<put-attribute name="title" value="" />-->
+        <put-attribute name="cssPluginByPage" value="" />
+        <put-attribute name="cssByPage" value="" />
+        <put-attribute name="header" value="/WEB-INF/basefragments/_headerNew.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/basefragments/_sidebarNew.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="jsByPage" value="" />
+    </definition>
+
+    <!-- ManageFarm Page  -->
+    <definition name="manageFarm" extends="base.definition">
+        <!--<put-attribute name="title" value="Home Page" />-->
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/manageFarm.jsp" />
+        <put-list-attribute name="cssPluginByPage">
+            <add-attribute value="/static/plugins/datatables.net-bs4/dataTables.bootstrap4.min.css" />
+            <add-attribute value="/static/assets/pages/data-table/css/buttons.dataTables.min.css" />
+            <add-attribute value="/static/plugins/datatables.net-responsive-bs4/responsive.bootstrap4.min.css" />
+            <add-attribute value="/static/assets/pages/data-table/extensions/responsive/css/responsive.dataTables.css" />
+        </put-list-attribute>
+        <put-list-attribute name="cssByPage">
+            <add-attribute value="/static/assets/pages/dt-modal/css/dt-modal.css" />
+        </put-list-attribute>
+        <put-list-attribute name="jsByPage">
+            <add-attribute value="/static/plugins/datatables.net/jquery.dataTables.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-buttons/dataTables.buttons.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/js/jszip.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/js/pdfmake.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/js/vfs_fonts.js" />
+            <add-attribute value="/static/assets/pages/data-table/extensions/responsive/js/dataTables.responsive.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-buttons/buttons.print.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-buttons/buttons.html5.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-bs4/dataTables.bootstrap4.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-responsive/dataTables.responsive.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-responsive-bs4/responsive.bootstrap4.min.js" />
+            <add-attribute value="/static/plugins/i18next/i18next.min.js" />
+            <add-attribute value="/static/plugins/i18next-xhr-backend/i18nextXHRBackend.min.js" />
+            <add-attribute value="/static/plugins/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js" />
+            <add-attribute value="/static/plugins/jquery-i18next/jquery-i18next.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/extensions/responsive/js/responsive-custom.js" />
+        </put-list-attribute>
+    </definition>
+    <!-- Add farm Page  -->
+    <definition name="addFarm" extends="base.definition">
+        <!--<put-attribute name="title" value="Home Page" />-->
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/addFarm.jsp" />
+    </definition>
+    <!-- Farm detail Page  -->
+    <definition name="farmDetail" extends="base.definition">
+        <!--<put-attribute name="title" value="Home Page" />-->
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/farm.jsp" />
+    </definition>
+
+    <definition name="farmAjax" extends="base.definition">
+        <!--<put-attribute name="title" value="Home Page" />-->
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/farmAjax.jsp" />
+        <put-list-attribute name="cssPluginByPage">
+            <add-attribute value="/static/plugins/datatables.net-bs4/dataTables.bootstrap4.min.css" />
+            <add-attribute value="/static/assets/pages/data-table/css/buttons.dataTables.min.css" />
+            <add-attribute value="/static/plugins/datatables.net-responsive-bs4/responsive.bootstrap4.min.css" />
+            <add-attribute value="/static/assets/pages/data-table/extensions/responsive/css/responsive.dataTables.css" />
+        </put-list-attribute>
+        <put-list-attribute name="cssByPage">
+            <add-attribute value="/static/assets/pages/dt-modal/css/dt-modal.css" />
+        </put-list-attribute>
+        <put-list-attribute name="jsByPage">
+            <add-attribute value="/static/plugins/datatables.net/jquery.dataTables.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-buttons/dataTables.buttons.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/js/jszip.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/js/pdfmake.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/js/vfs_fonts.js" />
+            <add-attribute value="/static/assets/pages/data-table/extensions/responsive/js/dataTables.responsive.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-buttons/buttons.print.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-buttons/buttons.html5.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-bs4/dataTables.bootstrap4.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-responsive/dataTables.responsive.min.js" />
+            <add-attribute value="/static/plugins/datatables.net-responsive-bs4/responsive.bootstrap4.min.js" />
+            <add-attribute value="/static/plugins/i18next/i18next.min.js" />
+            <add-attribute value="/static/plugins/i18next-xhr-backend/i18nextXHRBackend.min.js" />
+            <add-attribute value="/static/plugins/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js" />
+            <add-attribute value="/static/plugins/jquery-i18next/jquery-i18next.min.js" />
+            <add-attribute value="/static/assets/pages/data-table/extensions/responsive/js/responsive-custom.js" />
+            <add-attribute value="/static/assets/pages/farm-ajax/js/main.js" />
+        </put-list-attribute>
+    </definition>
+
+</tiles-definitions>

@@ -9,6 +9,9 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long addressId;
 
+    private String street;
+    private String city;
+
     @OneToOne(mappedBy = "address")
     private Farm farm;
 
@@ -27,4 +30,19 @@ public class Address {
         this.farm = farm;
     }
 
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }
